@@ -1,6 +1,8 @@
-<html>
+<html ng-app="">
     <head>
         <link rel="stylesheet" type="text/css" href="css_sheet.css"></link>
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css"></link>
+        <script type="text/javascript" src="angular.min.js"></script>     
     </head>
     <body>
         <div class="titleProperty">
@@ -12,7 +14,7 @@
                 <ul class="inlineChannels">
                     <li><a href="Food">Food     </a></li>
                     <li><a href="Nutrition">Nutrition     </a></li>
-                    <li><a href="Suggestions">Suggestions     </a></li>
+                    <li><a href="Suggestions.html">Suggestions     </a></li>
                 </ul>
         </section>
 
@@ -22,7 +24,7 @@
                 <ul class="list">
                     <li>
                         <img src="pancake.jpg" alt="Photo of pancake" height="90px" width="90px">
-                        <a href="cake.html" class="mainRec"><h3>Cake</h3></a><br/><p>A cake that will make your breakfast</p></li>
+                        <a href="cake.html" class="mainRec"><h3>Cake   {{R_name}}   </h3></a><br/><p>A cake that will make your breakfast</p></li>
                     <br/>
                     <li>
                         <img src="drink.jpg" alt="Photo of drink" height="90px" width="90px">
