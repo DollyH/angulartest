@@ -86,6 +86,12 @@ text-align: center;
     border: 1px solid black;
 }
 
+.recHeader{
+    float: right;
+    width: 70%;
+}
+
+
 .ingreDivider{
     padding: 0px 30px 10px 130px;
     margin: 10px 0px 16px 0px;
