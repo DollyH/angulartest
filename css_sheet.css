@@ -1,0 +1,109 @@
+html,body,h1,h2,h3,h4,h5,h6,a,ul,ol,li,p{
+    padding :0;
+    border: 0;
+    margin: 0;
+}
+
+br{
+    padding: 10px 0px 0px 0px;
+}
+
+body{
+    font: "helvetica";
+    padding: 20px 20px 20px;
+    background-color: floralwhite;
+    background-image: url(faun.jpg);
+}
+
+.titleProperty{
+ background-color: floralwhite;
+}
+
+
+.mainTitle{
+    border: 10px solid black;
+    padding: 30px 3px 20px 3px;
+    align-content: center;
+    color: dodgerblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 40px;  
+    text-decoration: black; 
+    text-align: center;
+   
+}
+
+.list img{
+    float: left;
+    padding: 10px;
+}
+
+.imgIndent{
+    display: block;
+   float: right;
+   margin: auto 0 auto 0;
+}
+
+.imageOfrec{
+    display: inline;
+}
+
+.mainRec{
+    font-size: 20px;
+    font-style: bold;
+}
+
+.mainRec:hover {
+   
+    color: mediumvioletred;
+    
+}
+
+.inlineChannels{
+padding: 40px 30px 30px 30px;
+text-align: center;
+}
+
+.inlineChannels li{
+    display: inline;
+    padding: 10px;
+    color: brown;
+    font-size: 22px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    
+}
+
+.subtitle{
+    font-size: 20px;
+    color: black;
+}
+
+.recipeList{
+    padding: 10px 30px 10px 30px;
+}
+
+.list li{
+    padding: 10px 30px 50px 30px;
+    
+    border: 1px solid black;
+}
+
+.ingreDivider{
+    padding: 0px 30px 10px 130px;
+    margin: 10px 0px 16px 0px;
+    border-bottom: 1px solid grey;
+}
+
+.recipeHeader{
+    padding: 10px 30px 25px 30px;
+    border: 10px solid black; 
+}
+
+.direction{
+    padding: 0px 30px 10px 130px;
+     margin: 0px 0px 10px 0px;
+    border-bottom: 1px solid grey;
+}
+
+.ingPad{
+    padding: 20px 0px 0px 0px;
+}
+
