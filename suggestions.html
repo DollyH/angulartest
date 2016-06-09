@@ -1,1 +1,24 @@
+<html ng-app="">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css_sheet.css"></link>
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css"></link>
+        <script type="text/javascript" src="angular.min.js"></script>  
+    </head>
 
+    <body>
+        <h1 class="recipeHeader">Suggestions</h1> 
+        <br/>
+        <p class="subtitle">Your suggestions are valued to us...</p>
+        <br/>
+         <form>
+
+            Name <br/> <input type="text" class="suggestion" ng-model="name">{{name}}
+            <br/>
+            Suggestion <br/> <input type="text" class="suggestion"> 
+            <br/>
+            <button type="button" onclick="alert('Thankyou!! Visit again')">Post</button>
+        </form>
+       
+    </body>
+</html>
