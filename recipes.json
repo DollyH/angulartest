@@ -4,13 +4,39 @@
         "ingredient": ["1 tablespoon white sugar","1 1/4 cups milk","1 egg","3 tablespoons butter, melted"],
         "directions": ["In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center and pour in the milk, egg and melted butter; mix until smooth.","Heat a lightly oiled griddle or frying pan over medium high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake.","Brown on both sides and serve hot."] ,
         "footnote":"Tip : Aluminum foil can be used to keep food moist, cook it evenly, and make clean-up easier.",
-        "reviews":[]
+        "reviews":[],
+        "image": "pancake.jpg"
     },
     {
         "name": "Breakfast Drink",
         "ingredient": ["1 cup strawberries, hulled","1/4 cup wheat germ","1 teaspoon vanilla extract"],
         "directions": ["In a blender combine pineapple juice, bananas yogurt, strawberries, wheat germ and vanilla extract. Blend until smooth.","Serve Chilled."],
         "footnote": "Tip : you can add berries for enhancing taste",
-        "reviews":[]
+        "reviews":[],
+        "image": "drink.jpg"
+    },
+    {
+        "name": "Summer Drink",
+        "ingredient": ["1 cup strawberries, hulled","1/4 cup wheat germ","1 teaspoon vanilla extract"],
+        "directions": ["In a blender combine pineapple juice, bananas yogurt, strawberries, wheat germ and vanilla extract. Blend until smooth.","Serve Chilled."],
+        "footnote": "Tip : you can add berries for enhancing taste",
+        "reviews":[],
+        "image": "drink.jpg"
+    },
+    {
+        "name": "Winter Drink",
+        "ingredient": ["1 cup strawberries, hulled","1/4 cup wheat germ","1 teaspoon vanilla extract"],
+        "directions": ["In a blender combine pineapple juice, bananas yogurt, strawberries, wheat germ and vanilla extract. Blend until smooth.","Serve Chilled."],
+        "footnote": "Tip : you can add berries for enhancing taste",
+        "reviews":[],
+        "image": "drink.jpg"
+    },
+    {
+        "name": "Healthy Drink",
+        "ingredient": ["1 cup strawberries, hulled","1/4 cup wheat germ","1 teaspoon vanilla extract"],
+        "directions": ["In a blender combine pineapple juice, bananas yogurt, strawberries, wheat germ and vanilla extract. Blend until smooth.","Serve Chilled."],
+        "footnote": "Tip : you can add berries for enhancing taste",
+        "reviews":[],
+        "image": "drink.jpg"
     }
 ]
