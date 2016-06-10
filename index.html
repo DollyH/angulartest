@@ -4,93 +4,83 @@
         <link rel="stylesheet" type="text/css" href="css_sheet.css"></link>
         <link rel="stylesheet" type="text/css" href="bootstrap.min.css"></link>
         <script type="text/javascript" src="angular.min.js"></script>
+        <script type="text/javascript" src="jquery.min.js"></script>
         <script type="text/javascript" src="app.js"></script>     
     </head>
     <body>
         <div class="titleProperty">
             <h1 class="mainTitle">Recipe Book is Here !!! <p class="subtitle">Try Cooking in 15 ish minutes ...</p></h1>         
-        </div>
-        
+        </div>   
 
         <div ng-controller="RecipeController as recipeController">
-            <section style="float: left; width: 25%;">
-                <h2 class="recipeList">Recipes </h2>
-               <!-- <ul class="list" >
-                    <li>
-                        <img src="pancake.jpg" alt="Photo of pancake" height="90px" width="90px">
-                        <a href="cake.html" class="mainRec"><h3>Cake</h3></a><br/><p>A cake that will make your breakfast</p></li>
-                    <br/>
-                    <li>
-                        <img src="drink.jpg" alt="Photo of drink" height="90px" width="90px">
-                        <a href="BreakfastDrink.html" class="mainRec"><h3>Breakfast drink</h3></a><br/><p>Be ready for somthing tasty and healthy!!</p></li>
-                -->
-                <a class="list-group-item" ng-click="select(item)" ng-repeat="item in itemDetails">{{item.name}}</a>
+                <section style="float: left; width: 25%;">            
+                    <h2 class="recipeList">Recipes </h2>
+                    <ul class="ingreDivideritem" >
+                        <li class="ingreDivider1" ng-click="select(item)"   ng-repeat="item in itemDetails"><a ng-click='recipeController.showOne()'> {{item.name}} <a/><br/> </li> 
+                    </ul>    
+                </section>
+
+                <section class="recHeader" ng-show='recipeController.One'>
                 
-            </section>
+                    <h1 class="recipeHeader">{{selected.name}}</h1> <br/>
+                    
+                    <div class="imageOfrec">
+                        <img class="imgIndent" src="{{selected.image}}" alt="Photo of pancake"/>     
+                        <h2 class="ingPad">Ingredients are :</h2>
+                        <section class="ingreDivider">
+                             <ul>
+                                 <li ng-repeat="ingredient in selected.ingredient">{{ingredient}}</li>
+                             </ul>
+                             <br/>
+                        </section>
+                    </div>
+                    
+                    <h2>Directions :</h2>
 
-        <section class="recHeader">
-            <h1 class="recipeHeader">{{selected.name}}</h1> 
-            <br/>
-            <div class="imageOfrec">
-                    <img class="imgIndent" src="pancake.jpg" alt="Photo of pancake">
-
-                    <h2 class="ingPad">Ingredients are :</h2>
-                    <section class="ingreDivider">
-                        
-                    <ul>
-                        <li ng-repeat="ingredient in selected.ingredient">{{ingredient}}</li>
-                    </ul>
-                    <br/>
+                    <section class="direction">
+                        <ol>
+                            <li ng-repeat="direction in selected.directions">{{direction}}</li>
+                        </ol>
                     </section>
-            </div>
-            
-            <h2>Directions :</h2>
-            <section class="direction">
-            <ol>
-                <li ng-repeat="direction in selected.directions">{{direction}}</li>
-            </ol>
-            </section>
-            <br/>
-            <h4>Footnotes :</h4>
-            <p>{{selected.footnote}}</p>
+                    <br/>
 
-            <form name="reviewForm" ng-submit="reviewForm.$valid && recipeController.addReview(selected)">
+                    <h4>Footnotes :</h4>
+                    <p>{{selected.footnote}}</p>
 
-            <blockquote>
-                <strong>{{recipeController.review.stars}} Stars</strong>
-                {{recipeController.review.body}}
-                <cite class="clearfix">—{{recipeController.review.author}}</cite>
-            </blockquote>
+                    <form name="reviewForm"  ng-submit="reviewForm.$valid && recipeController.addReview(selected)" novalidate>
 
-            <blockquote ng-repeat="review1 in recipeController.recipeReviews">
-                <strong>{{review1.stars}} Stars</strong>
-                {{review1.body}}
-                <cite class="clearfix">—{{review1.author}}</cite>
-            </blockquote>
+                        <blockquote>
+                            <strong>{{recipeController.review.stars}} Stars</strong>
+                            {{recipeController.review.body}}
+                            <cite class="clearfix">—{{recipeController.review.author}}</cite>
+                        </blockquote>
 
-            <!--  Review Form -->
-            <h4>Submit a Review</h4>
-            <fieldset class="form-group">
-                <select ng-model="recipeController.review.stars" class="form-control" ng-options="stars for stars in [5,4,3,2,1]" title="Stars">
-                <option value>Rate the Product</option>
-                </select>
-            </fieldset>
-            <fieldset class="form-group">
-                <textarea ng-model="recipeController.review.body" class="form-control" placeholder="Write a short review of the product..." title="Review"></textarea>
-            </fieldset>
-            <fieldset class="form-group">
-                <input ng-model="recipeController.review.author" type="email" class="form-control" placeholder="jimmyDean@example.org" title="Email" />
-            </fieldset>
-            <fieldset class="form-group">
-                <input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
-            </fieldset>
-            </form>
+                        <div ng-repeat="review1 in recipeController.recipeReviews" ng-if="review1.name == selected.name">
+                            <blockquote ng-repeat="review2 in review1.reviews">
+                                <strong>{{review2.stars}} Stars</strong>
+                                {{review2.body}}
+                                <cite class="clearfix">—{{review2.author}}</cite>
+                            </blockquote>
+                        </div>
 
-        </section>
+                        <h4>Submit a Review</h4>
+                        <fieldset class="form-group">
+                            <select ng-model="recipeController.review.stars" class="form-control" ng-options="stars for stars in [5,4,3,2,1]" title="Stars">
+                            <option value>Rate the Product</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <textarea ng-model="recipeController.review.body" class="form-control" placeholder="Write a short review of the product..." title="Review"></textarea>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <input ng-model="recipeController.review.author" type="email" class="form-control" placeholder="GeetaSaraf@barclays.com" title="Email" />
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <input type="submit" class="btn btn-primary pull-right" value="Submit Review" ng-click="recipeController.addReview(selected)"/>
+                        </fieldset>
+                    </form>
 
+                 </section>
         </div>
-
-
     </body>
-
 </html>
