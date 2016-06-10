@@ -20,6 +20,8 @@ body{
 }
 
 
+
+
 .mainTitle{
     border: 10px solid black;
     padding: 30px 3px 20px 3px;
@@ -39,8 +41,12 @@ body{
 
 .imgIndent{
     display: block;
+    height: 150px;
+    width: 150px;
    float: right;
-   margin: auto 0 auto 0;
+   border: 3px solid lightcoral;
+   margin: 0px 150px 0px 0px;
+  
 }
 
 .imageOfrec{
@@ -80,22 +86,34 @@ text-align: center;
     padding: 10px 30px 10px 30px;
 }
 
-.list li{
-    padding: 10px 30px 50px 30px;
-    
-    border: 1px solid black;
-}
+
 
 .recHeader{
+    
     float: right;
     width: 70%;
-}
+} 
 
 
 .ingreDivider{
     padding: 0px 30px 10px 130px;
     margin: 10px 0px 16px 0px;
     border-bottom: 1px solid grey;
+}
+
+.ingreDivider1{
+    padding: 0px 20px 10px 0px;
+    margin: 10px 0px 16px 0px;
+    border-bottom: 1px solid grey;
+}
+
+.ingreDivideritem{
+    list-style: none;
+    width:80%;
+    margin: 10px 0px 16px 0px;
+    padding-bottom: 10px;
+    text-align: left;
+    
 }
 
 .recipeHeader{
@@ -111,5 +129,11 @@ text-align: center;
 
 .ingPad{
     padding: 20px 0px 0px 0px;
+}
+
+.list1 li{
+       padding: 10px 30px 50px 30px;
+    list-style: none;
+    text-align: left;
 }
 
